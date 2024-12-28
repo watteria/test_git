@@ -1,0 +1,12 @@
+name: primer Workflow
+on: [push]
+
+jobs:
+    build:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/chekout@v1
+
+        - name: Hola test!
+          run: echo "Hello!!!! from ${{ github.workflow }} triggered by the ${{ github.event_name }} done by ${{ github.actor }}"
+
